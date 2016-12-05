@@ -1,0 +1,264 @@
+body{
+	background-color: #FD5959;
+}
+
+.title{
+	width: 500px;
+	margin: 20PX auto;
+	color: #fcfcfc;
+	text-align: center;
+	font-weight: blod;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+   .title h1{
+	letter-spacing: 20px;
+}
+.title p{
+	letter-spacing: 2px;
+}
+
+.card-wrap{
+	width: 960px;
+	height: 500px;
+	margin: 50px auto;
+	background: rgba(255, 255, 255, .1);
+	border-radius: 10px;
+	box-shadow: 0px 0px 40px 4px rgba(0, 1, 1, 0.1);
+	overflow: hidden;
+	position: relative;
+}
+.card-wrap .arrows{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	padding: 0 20px;
+	transform: translate(0, -50%);
+	height: auto;
+	width: 100%;
+}
+
+.card-wrap .arrows .arrow-left{
+	width: 30px;
+	height: 30px;
+	background: url('../imgs/arrow-left.png');
+	transform: scale(1.2);
+	float: left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+}
+.card-wrap .arrows .arrow-right{
+	width: 30px;
+	height: 30px;
+	background: url('../imgs/arrow-right.png');
+	transform: scale(1.0);
+	float: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+}
+.card-wrap .arrows .arrow-left:hover{
+	opacity: 0.5;
+}	
+.card-wrap .arrows .arrow-right:hover{
+	opacity: 0.5;
+}
+
+.card-wrap .card{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 400px;
+	max-width: 300px;
+	max-height: 400px;
+	background-color: #f6f6f6;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+}
+.card-wrap .card .avatar{
+	width: 100%;
+	height: 150px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 5px 5px 0 0;
+	box-shadow: 0px 0px 52px 5px rgba(0, 1, 1, 0.15);
+}
+
+.card-wrap .card .info{
+	text-align: center;
+	margin-top: 20px;
+}
+.card-wrap .card .info .name{
+	font-size: 24px;
+	font-weight: 500;
+}
+.card-wrap .card .info .status{
+	font-size: 12px;
+	color: #408AB4;
+}
+.card-wrap .card .message{
+	margin-top: 20px;
+	height: 90px;
+	overflow: hidden;
+}
+.card-wrap .card .message .num{
+	color: #fff;
+	height: 100%;
+	width: 20%;
+	background-color: #6C7A89;
+	float:left;
+	text-align: center;
+	line-height: 90px;
+	font-weight: bolder;
+}
+.card-wrap .card .message .desc{
+	height: 100%;
+	width: 80%;
+	color: #1B1F3A;
+	float:right;
+	font-size: 12px;
+	padding-left: 5px;
+}
+.card-wrap .card .setting {
+	margin-top: 30px;
+	padding-left: 10px; 
+	height: 40px;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 0 4px rgba(0, 1, 1, 0.1);
+}
+.card-wrap .card .setting time{
+	font-size: 12px;
+	color: #408AB4;
+	float: left;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+}
+.card-wrap .card .setting .option{
+	float: right;
+	width: 30%;
+}
+.card-wrap .card .setting .option li{
+	float: left;
+	height: 40px;
+	margin-right: 10px;
+}
+.card-wrap .card .setting .option li a img{
+	width: 15px;
+	height: 15px;
+	padding-top: 12.5px;
+}
+
+
+.card-wrap .card.left.L4,
+.card-wrap .card.right.R4{
+	left: 25%;
+	transform: translate(-50%, -50%) scale(0.75);
+	opacity: 0.8;
+	-webkit-filter: blur(3px);
+	z-index: 10;
+}
+.card-wrap .card.left.L3,
+.card-wrap .card.right.R3{
+	left: 29%;
+	transform: translate(-50%, -50%) scale(0.80);
+	opacity: 0.9;
+	-webkit-filter: blur(2px);
+	z-index: 11;
+
+}
+.card-wrap .card.left.L2,
+.card-wrap .card.right.R2{
+	left: 33%;
+	transform: translate(-50%, -50%) scale(0.85);
+	opacity: 0.9;
+	-webkit-filter: blur(2px);
+	z-index: 12;
+
+}
+.card-wrap .card.left.L1,
+.card-wrap .card.right.R1{
+	left: 40%;
+	transform: translate(-50%, -50%) scale(0.90);
+	opacity: 0.95;
+	-webkit-filter: blur(1px);
+	z-index: 13;
+}
+.card-wrap .card.active{
+	left:50%;
+	transform: translate(-50%, -50%) scale(1);
+  	-webkit-filter: blur(0px);
+  	z-index: 50;
+}
+
+.card-wrap .card.active .avatar{
+	animation: move 15s linear infinite;
+	animation-direction: alternate;
+}
+
+.card-wrap .card.right.R4{
+	left: 75%;
+	
+}
+.card-wrap .card.right.R3{
+	left: 71%;
+	
+}
+.card-wrap .card.right.R2{
+	left: 67%;
+	
+}
+.card-wrap .card.right.R1{
+	left: 60%;
+}
+
+.card-wrap .card.slideLeft{
+	animation: slideLeft 0.3s ease-in-out forwards;
+}
+
+.card-wrap .card.slideRight{
+	animation: slideRight 0.3s ease-in-out forwards;
+}
+
+@keyframes slideLeft{
+	0%{
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	50%{
+		transform: translate(-50%, -50%) scale(0.975) rotateY(45deg);
+	}
+	100%{
+		left: 40%;
+		transform:  translate(-50%, -50%) scale(0.95);
+	}
+}
+@keyframes slideRight{
+	0%{
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	50%{
+
+		transform: translate(-50%, -50%) scale(0.975) rotateY(45deg);
+	}
+	100%{
+		left: 60%;
+		transform:  translate(-50%, -50%) scale(0.95);
+	}
+}
+
+/*@keyframes move{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 50% 50%;
+	}
+
+}*/
